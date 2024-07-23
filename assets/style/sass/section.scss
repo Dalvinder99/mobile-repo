@@ -1,0 +1,200 @@
+.section {
+    background-color: #27283a;
+    display: flex;
+    flex-direction: column;
+
+
+    .profile-box {
+        display: flex;
+        justify-content: center;
+        transform: translateY(-59%);
+
+        .white-box {
+            position: relative;
+            width: 26%;
+            padding-top: 26%;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+
+        .border-box {
+            border: 1px solid grey;
+            width: 90%;
+            border-radius: 50%;
+            position: absolute;
+            left: 5%;
+            right: 0;
+            bottom: 5%;
+            top: 5%;
+            display: flex;
+        }
+
+
+        .profile-img {
+            background-image: url('/assets/image/man.jpg');
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover !important;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        img {
+            width: 30%;
+            height: 30%;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+    }
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -13%;
+
+    h3 {
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    P {
+        font-family: "Poppins", sans-serif;
+        font-size: 20PX;
+        color: white;
+        font-weight: 100;
+    }
+
+    .star-icon {
+        font-size: 16.5px;
+        color: #F0E68C;
+
+        i:hover {
+            color: #FFC72C;
+        }
+    }
+
+    .star-icon span {
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-weight: 100;
+        font-size: 15px;
+    }
+
+
+}
+
+.btn {
+    padding-top: 18px;
+
+    button {
+        width: 210px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        font-family: "Poppins", sans-serif;
+        background-color: red;
+        color: white;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color:#000;
+    }
+
+}
+
+.row-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    padding: 20px 0px;
+
+    .icon-select {
+        position: relative;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #353648;
+        }
+
+        &:hover,
+        &.active {
+            .icon-box {
+                background-color: #2d4135;
+            }
+
+            span {
+                color: #41d600;
+                cursor: pointer;
+            }
+
+            p {
+                color: #41d600;
+                cursor: pointer;
+            }
+
+            &::after {
+                content: '';
+                height: 4px;
+                width: 130%;
+                transform: translateX(-12%);
+                background-color: #41d600;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+            }
+
+        }
+
+        span {
+            font-size: 200%;
+            color: white;
+        }
+
+        p {
+            font-family: "Poppins", sans-serif;
+            color: white;
+            font-weight: 100;
+            padding-top: 5px;
+            text-align: center;
+        }
+
+        &::after {
+            content: '';
+            height: 4px;
+            width: 115px;
+            background-color: #41d600;
+            position: absolute;
+            bottom: 0;
+            left: -38%;
+            display: none;
+        }
+    }
+
+}
